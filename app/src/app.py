@@ -7,6 +7,7 @@ sys.path.append('./')
 from logutil import LogUtil
 from importenv import ImportEnvKeyEnum
 import importenv as setting
+from dataclass import Data
 
 PYTHON_APP_HOME = os.getenv('PYTHON_APP_HOME')
 logger = getLogger(__name__)
@@ -37,7 +38,10 @@ if __name__ == '__main__':
   logger.info(type(hoge[1]))
 
   logger.info('----')
+  
+  data = Data(id = 1, hoge = 'hoge')
+  logger.info(type(data))
 
-  # .envの取得
-  # setting.ENV_DIC[ImportEnvKeyEnum.importenvに書いた値.value]
+  logger.info('----')
+  
   logger.info('Finish')
