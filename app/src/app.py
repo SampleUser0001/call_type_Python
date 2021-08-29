@@ -19,7 +19,25 @@ logger.addHandler(handler)
 logger.propagate = False
 
 if __name__ == '__main__':
-  print('Hello Python on Docker!!')
-  logger.info('This is logger message!!')
+  logger.info('Start')
+  logger.info('----')
+  hoge = []
+  logger.info(type(hoge))
+
+  logger.info('----')
+
+  hoge.append('hoge')
+  logger.info(type(hoge))
+  logger.info(type(hoge[0]))
+
+  logger.info('----')
+
+  hoge.append(1)
+  logger.info(type(hoge))
+  logger.info(type(hoge[1]))
+
+  logger.info('----')
+
   # .envの取得
   # setting.ENV_DIC[ImportEnvKeyEnum.importenvに書いた値.value]
+  logger.info('Finish')
